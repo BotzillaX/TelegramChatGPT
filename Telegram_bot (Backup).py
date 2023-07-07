@@ -98,7 +98,7 @@ def greet(message):
             novel, tokens = openai2(message.text, api_key)
             bot.send_message(message.chat.id, str(novel))
             
-            bot.send_message(message.chat.id, str(len(tokens)) +" tokens have been used until now == " + str((price/1000) * len(tokens)) +" €")
+            bot.send_message(message.chat.id, str(len(tokens)) +" tokens have been used until now == " + str((price/1000) * len(tokens)) +"€")
 
 
     
