@@ -14,3 +14,7 @@ It also tells you how much money you have spend yet to track your prompting and 
 
 
 ![image](https://github.com/DictatorKev/TelegramChatGPT/assets/103073906/21f27d5e-16cd-494f-82e7-bee91e67d64c)
+
+
+
+make sure both files are in the same folder or path
