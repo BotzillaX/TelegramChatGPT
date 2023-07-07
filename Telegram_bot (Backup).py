@@ -23,7 +23,7 @@ price = 0.0015
 
 
 
-tokenizer = GPT2Tokenizer.from_pretrained('gpt2')
+tokenizer = GPT2Tokenizer.from_pretrained('gpt2') #should work for up to gpt4
 
 def process_python_file(numberOfCharacters):
     current_dir = os.getcwd()
@@ -31,22 +31,17 @@ def process_python_file(numberOfCharacters):
     python_file_path = os.path.abspath(__file__)
 
     python_file_name = os.path.splitext(os.path.basename(python_file_path))[0]
-
-    directory_path = os.path.dirname(python_file_path)
+    directory_path = os.path.dirname(python_file_path)   
 
     documentation_file_path = os.path.join(directory_path, "documentation.txt")
-
     if os.path.exists(documentation_file_path):
-        with open(documentation_file_path, "a+") as file:
+        with open(documentation_file_path, "a+") as file:      
             file.write(numberOfCharacters + "\n")
-
     with open(documentation_file_path, "r") as file:
         content = file.read()
         
     tokens = tokenizer.encode(content)
-
     print("Total tokens:", len(tokens))
-
     return tokens
 
 
